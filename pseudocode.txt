@@ -1,0 +1,49 @@
+BACA dan SIMPAN notation
+BACA dan SIMPAN problem
+BACA dan SIMPAN nama
+BACA dan SIMPAN correctAnswer
+BACA dan SIMPAN object player
+
+TAMPILKAN "Hello [nama pemain], Let's start the game!"
+
+IF PLAYER'S SCORE KURANG DARI 50 THEN
+	ULANGI 
+		IF index sama dengan ganjil
+			PUSH karakter angka ke problem
+		ELSE
+			PUSH karakter operator ke notation
+	SAMPAI 5 KALI
+	BACA dan SIMPAN question
+	question sama dengan problem
+	total sama dengan total kalkulasi angka dan operator di dalam problem
+	PUSH karakter "=" dan total ke dalam question
+	hiddenPart sama dengan angka acak dengan range panjang array problem
+	
+	IF karakter yang ada di dalam question pada urutan array ke hiddenPart sama dengan "=" THEN
+		LAKUKAN pengulangan assign nilai ke dalam variable hiddenPart dengan angka acak range panjang array problem
+	ELSE
+		assign karakter yang ada pada problem[hiddenPart] ke dalam variable correctAnswer
+		assign question[hiddenPart] = "?"
+
+ELSE
+	ULANGI 
+		IF index sama dengan ganjil
+			PUSH karakter angka ke problem
+		ELSE
+			PUSH karakter operator ke notation
+	SAMPAI index = 9
+	BACA dan SIMPAN question
+	question sama dengan problem
+	total sama dengan total kalkulasi angka dan operator di dalam problem
+	PUSH karakter "=" dan total ke dalam question
+	hiddenPart sama dengan angka acak dengan range panjang array problem
+	
+	IF karakter yang ada di dalam question pada urutan array ke hiddenPart sama dengan "=" THEN
+		LAKUKAN pengulangan assign nilai ke dalam variable hiddenPart dengan angka acak range panjang array problem
+	ELSE
+		assign karakter yang ada pada problem[hiddenPart] ke dalam variable correctAnswer
+		assign question[hiddenPart] = "?"
+
+	MASUKKAN dan SIMPAN jawaban
+	IF jawaban sama dengan correct answer
+	score pemain bertambah 10
